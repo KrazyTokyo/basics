@@ -64,7 +64,7 @@ class _LoginState extends State<Login> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Test Website',
+              'Test Application',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 35.0,
@@ -81,7 +81,7 @@ class _LoginState extends State<Login> {
                     child: Column(
                       children: [
                         const Text(
-                          'Login to the Website',
+                          'Log Into Application',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 20.0),
                         ),
@@ -89,7 +89,7 @@ class _LoginState extends State<Login> {
                         TextFormField(
                           decoration: InputDecoration(
                             border: const OutlineInputBorder(),
-                            labelText: 'Email',
+                            labelText: 'Email*',
                             hintText: 'Enter your email',
                             prefixIcon: const Icon(Icons.alternate_email),
                             errorText: emailErrorText,
@@ -102,7 +102,7 @@ class _LoginState extends State<Login> {
                         TextFormField(
                           decoration: InputDecoration(
                               border: const OutlineInputBorder(),
-                              labelText: 'Password',
+                              labelText: 'Password*',
                               hintText: 'Enter your Password',
                               prefixIcon: const Icon(Icons.vpn_key),
                               errorText: passwordErrorText,
@@ -123,9 +123,17 @@ class _LoginState extends State<Login> {
                               Navigator.pushReplacementNamed(
                                   context, '/signup');
                             },
-                            child: const Text(
-                              'Don\'t have an account? Sign up',
-                              style: TextStyle(color: Colors.blue),
+                            child: const Row(
+                              children: [
+                                Text('Don\'t have an account?'),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text(
+                                  'Sign up',
+                                  style: TextStyle(color: Colors.blue),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -142,14 +150,16 @@ class _LoginState extends State<Login> {
 
                               if (_emailField.text == staticEmail &&
                                   _passwordField.text == staticPassword) {
-                                Navigator.pushReplacementNamed(context, '/end');
+                                Navigator.pushReplacementNamed(
+                                    context, '/mainhome',
+                                    arguments: staticEmail);
                               }
                             });
                           },
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.black,
                               minimumSize: const Size(110, 50)),
-                          child: const Text('Login',
+                          child: const Text('Log In',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 17.0,
