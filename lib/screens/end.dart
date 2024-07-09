@@ -10,6 +10,9 @@ class End extends StatefulWidget {
 class _EndState extends State<End> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+        appBar: AppBar(
+      title: Text('data'),
+    ));
   }
 }
