@@ -68,6 +68,7 @@ class _SignUpState extends State<SignUp> {
   void dispose() {
     _emailField.dispose();
     _passwordField.dispose();
+    _cpasswordField.dispose();
     super.dispose();
   }
 
