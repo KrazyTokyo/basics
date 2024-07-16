@@ -216,7 +216,7 @@ class _SignUpState extends State<SignUp> {
                                     minimumSize: const Size(105, 45)),
                                 onPressed: () {},
                                 child: SizedBox(
-                                  width: 230.0,
+                                  width: 240.0,
                                   child: ListTile(
                                     onTap: () {},
                                     leading: const CircleAvatar(
@@ -227,7 +227,8 @@ class _SignUpState extends State<SignUp> {
                                       'Sign Up with Google',
                                       style: TextStyle(
                                           color: Color.fromARGB(255, 0, 0, 0),
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15.0),
                                     ),
                                   ),
                                 )),

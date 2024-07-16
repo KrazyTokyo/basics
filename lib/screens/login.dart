@@ -194,7 +194,8 @@ class _LoginState extends State<Login> {
                                       'Sign In with Google',
                                       style: TextStyle(
                                           color: Color.fromARGB(255, 0, 0, 0),
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15.0),
                                     ),
                                   ),
                                 )),
