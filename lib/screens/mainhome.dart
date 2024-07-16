@@ -11,8 +11,8 @@ class _MainHomeState extends State<MainHome> {
   @override
   Widget build(BuildContext context) {
     final email = ModalRoute.of(context)!.settings.arguments;
-    return WillPopScope(
-      onWillPop: () async => false,
+    return PopScope(
+      canPop: false,
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 246, 246, 246),
         body: Padding(
